@@ -29,7 +29,7 @@ export default function Intro() {
             }}
           >
             <Image
-              src="/Mashhood.png"
+              src="/Mashhood_.png"
               alt="Mashhood.png"
               width="192"
               height="192"
