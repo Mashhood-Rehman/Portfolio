@@ -58,7 +58,6 @@ const cardVariants = {
   },
 };
 
-// Container animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -102,10 +101,6 @@ export default function Skills() {
               transition: {
                 delay: 0.05 * index,
               },
-            }}
-            initial={{
-              opacity: 0,
-              y: 50,
             }}
             viewport={{
               once: true,
