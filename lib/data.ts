@@ -1,11 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
-import Patientary from "../public/patientary.png";
-import Semtech from "../public/Semtech.png";
-import whizlabs from "../public/Whizlabs.png";
-import wishtender from "../public/wishtender.png";
+
 
 export const links = [
   {
@@ -67,26 +62,36 @@ export const projectsData = [
     lnk: "https://job-portal-mu-pied.vercel.app/",
   },
   {
-    title: "Cart-Using-Redux-Toolkit",
+    title: "Fooderers-A FUll Stack Restaurant Website",
     description:
-      "A small frontend sample with Redux Toolkit intgration",
-    tags: ["React.js", "Javascript",  "Tailwind", "Redux-Toolkit"],
-    imageUrl: "/image.png",
-    lnk: "https://cart-using-redux-toolkit.vercel.app/",
+      "A Full Stack Website whole cooked in MERN with Redux Toolkit and Stripe",
+    tags: ["MERN", "STRIPE",  "Tailwind CSS", "Redux-Toolkit"],
+    imageUrl: "/Fooderers.webp",
+    lnk: "https://restaurant-vh77.vercel.app/",
+  },
+  {
+    title: "Chatmate-A realtime Chat application",
+    description:
+      "A FUll Stack project built in MERN with pure authentication and Socket.io",
+    tags: ["Tailwind CSS", "MERN",  "Socket.io", "Zustand"],
+    imageUrl: "/Chatmate.webp",
+    lnk: "https://chat-mate-chi.vercel.app/",
   },
  
  
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
   "JavaScript",
+  "Docker",
+  "CI/CD",
   "TypeScript",
   "React",
   "Next.js",
   "Node.js",
   "Git",
+  "HTML",
+  "CSS",
   "Tailwind",
   "MongoDB",
   "Redux-Toolkit",

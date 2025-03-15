@@ -60,11 +60,11 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Mashhood.</span> I&apos;m a 
-        <span className="font-bold"> full-stack developer</span> with 
+        <span className="font-bold">Hello, I&apos;m Mashhood.</span> I&apos;m a
+        <span className="font-bold"> full-stack developer</span> with
         <span className="font-bold"> 1 year</span> of experience. I enjoy
-         building <span className="italic">sites & apps</span>. My focus is 
-        <span className="underline"> React (Next.js)</span>.
+        building <span className="italic">sites & apps</span>. My focus is
+        <span className="underline"> MERN</span>.
       </motion.h1>
 
       <motion.div
@@ -87,8 +87,6 @@ export default function Intro() {
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
-    
-
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/mashhood-rehman-48117b24b/"
@@ -96,8 +94,13 @@ export default function Intro() {
         >
           <BsLinkedin />
         </a>
-
-      
+        <a
+          className="bg-white px-4 py-2 ml-2 text-black hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="/CV.pdf"
+          download="Resume_Mashhood.pdf"
+        >
+          Download CV
+        </a>
       </motion.div>
     </section>
   );
