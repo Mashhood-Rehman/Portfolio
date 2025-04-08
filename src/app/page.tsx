@@ -1,6 +1,6 @@
 import About from "../../components/about";
 import { Contact } from "../../components/contact";
-import Experience from "../../components/experiences"
+import Experience from "../../components/experiences";
 import Footer from "../../components/footer";
 import Header from "../../components/header";
 import Intro from "../../components/intro";
@@ -19,7 +19,7 @@ export default function Home() {
       <Skills />
       <Experience />
       <Contact />
-      <Footer/>
+      <Footer />
     </main>
   );
 }
