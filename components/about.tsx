@@ -11,7 +11,7 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-12 max-w-[45rem] text-center leading-8 sm:mb-20 "
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -19,19 +19,13 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        I am currently studying at <span className="font-medium">Punjab University</span>, where I am pursuing a degree in
-        <span className="font-medium"> Technology Education</span>. Alongside my studies, I decided to follow my passion for programming
-        and enrolled in a coding bootcamp to learn <span className="font-medium">full-stack web development</span>.
-        <span className="italic"> My favorite part of programming</span> is the problem-solving aspect. I <span className="underline">love</span>
-        the feeling of finally figuring out a solution to a problem. My core stack is  
-        <span className="font-medium"> React, Next.js, Node.js, and MongoDB</span>. I am also familiar with TypeScript. I am always looking to
-        learn new technologies and am currently seeking a <span className="font-medium">full-time position</span> as a software developer.
+        I am an undergraduate student at <span className="font-medium">Punjab University</span>, where I am pursuing a degree in
+        <span className="font-medium"> Technology Education</span>. Alongside my studies, I learnt <span className="font-medium ">full-stack web development</span>.
+        My core stack is
+        <span className="font-semibold"> React, Next.js, Node.js, and MongoDB</span>. I am also familiar with TypeScript.
       </p>
 
-      <p>
-        <span className="italic">When I&apos;m not coding</span>, I enjoy playing video games, and exploring new interests.
-        I also enjoy <span className="font-medium">learning new things</span>. 
-      </p>
+
     </motion.section>
   );
 }

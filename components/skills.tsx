@@ -10,14 +10,12 @@ import {
   CodepenIcon,
   Database,
   FileJson,
-  Folder,
   GitBranch,
   Globe,
   Layers,
   Palette,
   Rocket,
   Server,
-  Terminal,
   Wind,
   Atom,
 } from "lucide-react";
@@ -25,7 +23,6 @@ import {
 const skillIcons: Record<string, React.ReactNode> = {
   JavaScript: <FileJson size={20} />,
   Docker: <Rocket size={20} />,
-  "CI/CD": <Terminal size={20} />,
   TypeScript: <Code size={20} />,
   React: <Atom size={20} />,
   "Next.js": <Globe size={20} />,
@@ -37,7 +34,6 @@ const skillIcons: Record<string, React.ReactNode> = {
   MongoDB: <Database size={20} />,
   "Redux-Toolkit": <Layers size={20} />,
   Express: <Server size={20} />,
-  "Framer Motion": <Rocket size={20} />,
 };
 
 // Card variants for hover effect

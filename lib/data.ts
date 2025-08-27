@@ -30,25 +30,33 @@ export const links = [
 ] as const;
 
 export const experiencesData = [
- 
+
   {
-    title: "Full-Stack Developer",
+    title: "Full-Stack Developer Intern",
     location: "Ideoversity , Lahore",
     description:
-      "I worked as a Full-Stack developer for 4 months .",
+      "I worked as a Full-Stack developer Intern for 4 months .",
     icon: React.createElement(CgWorkAlt),
-    date: "2024 - present",
+    date: "May, 2024 - Aug, 2024",
   },
- 
+
   {
-    title: "Full-Stack Developer",
+    title: "Frontend Developer",
     location: "Xsuite Digital , Lahore",
     description:
-      "I am currently working as a Full-Stack developer at Xsuite Digital  .",
+      "I worked as a Frontend developer  for 8 months .",
     icon: React.createElement(CgWorkAlt),
-    date: "2024 - present",
+    date: "Aug, 2024 - April,2025",
   },
- 
+  {
+    title: "Full Stack Developer",
+    location: "Regent Business Strategies, Lahore",
+    description:
+      "I am currently working for Regent Business Strategies .",
+    icon: React.createElement(CgWorkAlt),
+    date: "May, 2025 - current",
+  },
+
 ] as const;
 
 export const projectsData = [
@@ -57,7 +65,7 @@ export const projectsData = [
     title: "Jobify",
     description:
       "A small frontend project in typescript with Google-auth.",
-    tags: ["Next.js", "TypeScript",  "Tailwind", "Google-auth"],
+    tags: ["Next.js", "TypeScript", "Tailwind", "Google-auth"],
     imageUrl: "/jobify.jpg",
     lnk: "https://job-portal-mu-pied.vercel.app/",
   },
@@ -65,26 +73,25 @@ export const projectsData = [
     title: "Fooderers-A FUll Stack Restaurant Website",
     description:
       "A Full Stack Website whole cooked in MERN with Redux Toolkit and Stripe",
-    tags: ["MERN", "STRIPE",  "Tailwind CSS", "Redux-Toolkit"],
+    tags: ["MERN", "STRIPE", "Tailwind CSS", "Redux-Toolkit"],
     imageUrl: "/Fooderers.webp",
     lnk: "https://restaurant-vh77.vercel.app/",
   },
   {
-    title: "Chatmate-A realtime Chat application",
+    title: "Swifttakeoff",
     description:
-      "A FUll Stack project built in MERN with pure authentication and Socket.io",
-    tags: ["Tailwind CSS", "MERN",  "Socket.io", "Zustand"],
-    imageUrl: "/Chatmate.webp",
-    lnk: "https://chat-mate-chi.vercel.app/",
+      "Swift Takeoffs specializes in accurate and efficient construction estimating services,",
+    tags: ["Tailwind CSS", "Vite"],
+    imageUrl: "/swifttakeoffs.webp",
+    lnk: "https://www.swifttakeoffs.com/",
   },
- 
- 
+
+
 ] as const;
 
 export const skillsData = [
   "JavaScript",
   "Docker",
-  "CI/CD",
   "TypeScript",
   "React",
   "Next.js",
@@ -96,5 +103,4 @@ export const skillsData = [
   "MongoDB",
   "Redux-Toolkit",
   "Express",
-  "Framer Motion",
 ] as const;

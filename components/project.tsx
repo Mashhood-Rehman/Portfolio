@@ -24,7 +24,7 @@ export default function Project({
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
-    <Link href={lnk}>
+    <Link target="_blank" href={lnk}>
     <motion.div
       ref={ref}
       style={{
