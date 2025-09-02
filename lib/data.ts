@@ -1,8 +1,9 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
+import { Section } from "./type";
 
 
-export const links = [
+export const links: {name: Section; hash: string}[] = [
   {
     name: "Home",
     hash: "#home",
