@@ -23,7 +23,6 @@ import {
 const skillIcons: Record<string, React.ReactNode> = {
   JavaScript: <FileJson size={20} />,
   Docker: <Rocket size={20} />,
-  TypeScript: <Code size={20} />,
   React: <Atom size={20} />,
   "Next.js": <Globe size={20} />,
   "Node.js": <Server size={20} />,
