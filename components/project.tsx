@@ -1,79 +1,100 @@
 "use client";
 
 import { useRef } from "react";
-import { projectsData } from "../lib/data";
-import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import Link from "next/link";
 
-type ProjectProps = (typeof projectsData)[number];
+type ProjectProps = {
+  title: string;
+  tags: readonly string[];
+  lnk: string;
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
+  isActive: boolean;
+  imageUrl: string; // Keep these for the type spread
+  description: string;
+};
 
 export default function Project({
   title,
-  description,
   tags,
-  imageUrl,
   lnk,
+  onMouseEnter,
+  onMouseLeave,
+  isActive,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1.33 1"],
-  });
-  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
+  const rotateX = useMotionValue(0);
+  const rotateY = useMotionValue(0);
+
+  const springConfig = { damping: 20, stiffness: 150 };
+  const springX = useSpring(rotateX, springConfig);
+  const springY = useSpring(rotateY, springConfig);
+
+  function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
+    if (!ref.current) return;
+    const rect = ref.current.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    const distX = e.clientX - centerX;
+    const distY = e.clientY - centerY;
+
+    // Magnetic pull effect
+    rotateX.set(distY * 0.1);
+    rotateY.set(distX * 0.1);
+  }
+
+  function handleMouseLeave() {
+    onMouseLeave();
+    rotateX.set(0);
+    rotateY.set(0);
+  }
 
   return (
-    <Link target="_blank" href={lnk}>
-    <motion.div
-      ref={ref}
-      style={{
-        scale: scaleProgess,
-        opacity: opacityProgess,
-      }}
-      className="group mb-3 sm:mb-8 last:mb-0"
+    <Link
+      target="_blank"
+      href={lnk}
+      className="group block border-b border-gray-900/10 dark:border-white/10 last:border-0"
     >
-      <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
-            {description}
-          </p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
+      <motion.div
+        ref={ref}
+        onMouseMove={handleMouseMove}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          x: springY,
+          y: springX,
+        }}
+        className="py-10 flex flex-col md:flex-row md:items-center justify-between transition-all duration-300 group-hover:px-4"
+      >
+        <div className="flex flex-col md:flex-row md:items-baseline gap-4 md:gap-8">
+          <h3 className={`text-4xl md:text-7xl font-bold tracking-tighter transition-all duration-500 ${isActive
+            ? "text-gray-900 dark:text-white"
+            : "text-gray-900/20 dark:text-white/20"
+            }`}>
+            {title}
+          </h3>
+          <div className="flex flex-wrap gap-2">
             {tags.map((tag, index) => (
-              <>
-                <li
-                  className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
-                  key={index}
-                >
-                  {tag}
-                </li>
-              </>
+              <span
+                key={index}
+                className={`text-xs md:text-sm font-medium border rounded-full px-3 py-1 transition-all duration-500 ${isActive
+                  ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900 border-transparent"
+                  : "border-gray-900/20 dark:border-white/20 text-gray-900/40 dark:text-white/40"
+                  }`}
+              >
+                {tag}
+              </span>
             ))}
-          </ul>
+          </div>
         </div>
 
-        <Image
-          src={imageUrl}
-          alt="Project I worked on"
-          quality={95}
-          width={500}  // Adjust the width value as needed
-          height={300}  // Adjust the height value as needed
-          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-        transition 
-        group-hover:scale-[1.04]
-        group-hover:-translate-x-3
-        group-hover:translate-y-3
-        group-hover:-rotate-2
-
-        group-even:group-hover:translate-x-3
-        group-even:group-hover:translate-y-3
-        group-even:group-hover:rotate-2
-
-        group-even:right-[initial] group-even:-left-40"
-        />
-      </section>
-    </motion.div>
+        <div className={`hidden md:block text-sm font-bold tracking-widest uppercase transition-all duration-500 ${isActive ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+          }`}>
+          View Project &rarr;
+        </div>
+      </motion.div>
     </Link>
   );
 }

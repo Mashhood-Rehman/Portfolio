@@ -3,7 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import { Section } from "./type";
 
 
-export const links: {name: Section; hash: string}[] = [
+export const links: { name: Section; hash: string }[] = [
   {
     name: "Home",
     hash: "#home",
@@ -79,12 +79,12 @@ export const projectsData = [
     lnk: "https://restaurant-vh77.vercel.app/",
   },
   {
-    title: "Swifttakeoff",
+    title: "Life Alarm Services",
     description:
-      "Swift Takeoffs specializes in accurate and efficient construction estimating services,",
-    tags: ["Tailwind CSS", "Vite"],
-    imageUrl: "/swifttakeoffs.webp",
-    lnk: "https://www.swifttakeoffs.com/",
+      "Life Alarm Services is an ecommerce store built with Next.js, Prisma and  NeonDB(Postgre).",
+    tags: ["Next.js", "Prisma", "NeonDB(Postgre)", "Tailwind CSS", "Typescript"],
+    imageUrl: "/lifealarmservices.webp",
+    lnk: "https://lifealarmservices.com/",
   },
 
 
