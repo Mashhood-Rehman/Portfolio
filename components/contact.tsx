@@ -17,10 +17,10 @@ export const Contact: React.FC = () => {
 
     try {
       await emailjs.sendForm(
-        "service_caqq35d",
-        "template_lg7p1pn",
+        "service_evzmijo",
+        "template_pk2hggw",
         form.current,
-        "7HSKk-xd76xWIGwT3"
+        "tU5JCaBPv8LEfmK5Z"
       );
       toast.success("Message sent successfully!");
       form.current.reset();
@@ -44,9 +44,9 @@ export const Contact: React.FC = () => {
         Contact me directly at{" "}
         <a 
           className="text-gray-900 underline hover:no-underline transition-all" 
-          href="mailto:mashhoodbutt47@gmail.com"
+          href="mailto:devmashhood8@gmail.com"
         >
-          mashhoodbutt47@gmail.com
+          devmashhood8@gmail.com
         </a>{" "}
         or use the form below.
       </p>
