@@ -96,8 +96,8 @@ export default function Intro() {
         </a>
         <a
           className="bg-white px-4 py-2 ml-2 text-black hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="/Resume_MASHHOOD.pdf"
-          download="Resume_MASHHOOD.pdf"
+          href="/resume_mashhood.pdf"
+          download="resume_mashhood.pdf"
         >
           Download CV
         </a>

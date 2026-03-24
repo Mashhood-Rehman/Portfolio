@@ -63,20 +63,20 @@ export const experiencesData = [
 export const projectsData = [
 
   {
-    title: "Jobify",
+    title: "MTLDispatch",
     description:
-      "A small frontend project in typescript with Google-auth.",
-    tags: ["Next.js", "TypeScript", "Tailwind", "Google-auth"],
-    imageUrl: "/jobify.jpg",
-    lnk: "https://job-portal-mu-pied.vercel.app/",
+      "A Saas Dashboard Admin Panel for Chauffeur companies.",
+    tags: ["MERN", "Javascript", "Tailwind", "Redux-Toolkit"],
+    imageUrl: "/mtldispatch.webp",
+    lnk: "https://mtldispatch.com/",
   },
   {
-    title: "Fooderers-A FUll Stack Restaurant Website",
+    title: "Trekso",
     description:
-      "A Full Stack Website whole cooked in MERN with Redux Toolkit and Stripe",
-    tags: ["MERN", "STRIPE", "Tailwind CSS", "Redux-Toolkit"],
-    imageUrl: "/Fooderers.webp",
-    lnk: "https://restaurant-vh77.vercel.app/",
+      "A travel-focused website offering flight deals, trip planning, and destination-based booking services.",
+    tags: ["Next.js", "Typescript", "Tailwind CSS", "PostgreSQL"],
+    imageUrl: "/trekso.webp",
+    lnk: "https://trekso.fr/",
   },
   {
     title: "Life Alarm Services",
