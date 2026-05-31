@@ -10,7 +10,7 @@ import Skills from "../../components/skills";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center px-4">
+    <main className="flex flex-col items-center w-full min-h-screen bg-white text-gray-900 px-4">
       <Header />
       <Intro />
       <SectionDivider />

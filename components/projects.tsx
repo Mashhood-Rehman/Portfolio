@@ -29,14 +29,13 @@ export default function Projects() {
   }, [mouseX, mouseY]);
 
   return (
-    <section ref={ref} id="projects" className="scroll-mt-28 mb-32 relative bg-white dark:bg-gray-950 overflow-hidden">
-      {/* Decorative Noise/Grain Overlay */}
-      <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+    <section ref={ref} id="projects" className="scroll-mt-28 mb-32 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
       <div className="relative z-10">
         <SectionHeading>My projects</SectionHeading>
 
-        <div className="flex flex-col max-w-5xl mx-auto px-4 divide-y divide-gray-900/10 dark:border-white/10">
+        <div className="flex flex-col max-w-5xl mx-auto px-4 divide-y divide-gray-900/10">
           {projectsData.map((project, index) => (
             <Project
               key={index}

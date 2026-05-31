@@ -17,7 +17,7 @@ const dockerImg = "/docker.png";
 const cicdImg = "/cicd.png";
 
 const iconBubbleClass =
-  "flex h-8 w-8 items-center justify-center rounded-full border border-black/[0.06] bg-white p-1.5 shadow-[0_2px_12px_-2px_rgba(0,0,0,0.1)] dark:border-white/10 dark:bg-gray-900 dark:shadow-[0_2px_12px_-2px_rgba(0,0,0,0.4)] sm:h-9 sm:w-9 sm:p-2";
+  "flex h-8 w-8 items-center justify-center rounded-full border border-black/[0.06] bg-white p-1.5 shadow-[0_2px_12px_-2px_rgba(0,0,0,0.1)] sm:h-9 sm:w-9 sm:p-2";
 
 export default function Skills() {
   const { ref } = useSectionInView("Skills");
@@ -69,7 +69,7 @@ export default function Skills() {
       <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12">
         {/* LEFT — text about my stack */}
         <motion.div
-          className="leading-7 text-gray-700 dark:text-gray-300"
+          className="leading-7 text-gray-700"
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -78,7 +78,7 @@ export default function Skills() {
           <p className="mb-4 text-base sm:text-lg">
             I build full-stack web apps with a modern, production-ready stack.
             My go-to setup is the{" "}
-            <span className="font-semibold text-gray-900 dark:text-white">
+            <span className="font-semibold">
               MERN stack
             </span>{" "}
             — MongoDB, Express, React, and Node.js — for scalable backends and
@@ -87,11 +87,11 @@ export default function Skills() {
 
           <p className="mb-4 text-base sm:text-lg">
             For newer projects I use{" "}
-            <span className="font-semibold text-gray-900 dark:text-white">
+            <span className="font-semibold">
               Next.js
             </span>{" "}
             with{" "}
-            <span className="font-semibold text-gray-900 dark:text-white">
+            <span className="font-semibold">
               TypeScript
             </span>{" "}
             to get server-side rendering, better performance, and type-safe
@@ -100,15 +100,15 @@ export default function Skills() {
 
           <p className="mb-4 text-base sm:text-lg">
             I containerize apps with{" "}
-            <span className="font-semibold text-gray-900 dark:text-white">
+            <span className="font-semibold">
               Docker
             </span>
             , automate deployments through{" "}
-            <span className="font-semibold text-gray-900 dark:text-white">
+            <span className="font-semibold">
               CI/CD pipelines
             </span>
             , and use{" "}
-            <span className="font-semibold text-gray-900 dark:text-white">
+            <span className="font-semibold">
               GitHub Actions
             </span>{" "}
             to run tests and ship code reliably.
@@ -116,7 +116,7 @@ export default function Skills() {
 
           <p className="text-base sm:text-lg">
             Everything lives on{" "}
-            <span className="font-semibold text-gray-900 dark:text-white">
+            <span className="font-semibold">
               GitHub
             </span>{" "}
             — version control, collaboration, and automated workflows all in
@@ -136,7 +136,7 @@ export default function Skills() {
           >
         {/* Inner circle line */}
         <div
-          className="absolute left-1/2 top-1/2 rounded-full border border-gray-200/60 dark:border-white/10"
+          className="absolute left-1/2 top-1/2 rounded-full border border-gray-200/60"
           style={{
             width: innerRadius * 2,
             height: innerRadius * 2,
@@ -147,7 +147,7 @@ export default function Skills() {
 
         {/* Outer circle line */}
         <div
-          className="absolute left-1/2 top-1/2 rounded-full border border-gray-200/60 dark:border-white/10"
+          className="absolute left-1/2 top-1/2 rounded-full border border-gray-200/60"
           style={{
             width: outerRadius * 2,
             height: outerRadius * 2,
@@ -207,7 +207,7 @@ export default function Skills() {
             innerRadius,
             <motion.div animate={{ rotate: -360 }} transition={{ duration: 40, repeat: Infinity, ease: "linear" }}>
               <div className={iconBubbleClass} title="Node.js">
-                <Image src={nodejsImg} alt="Node.js" width={32} height={32}className="h-full w-full object-contain" />
+                <Image src={nodejsImg} alt="Node.js" width={32} height={32} className="h-full w-full object-contain" />
               </div>
             </motion.div>
           )}
@@ -262,10 +262,10 @@ export default function Skills() {
 
         {/* Center hub */}
         <div
-          className="absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-gray-900 shadow-md dark:bg-white"
+          className="absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-gray-900 shadow-md"
           style={{ width: hubSize, height: hubSize }}
         >
-          <span className="text-center text-[0.45rem] font-bold uppercase leading-tight tracking-widest text-white dark:text-gray-900 sm:text-[0.5rem]">
+          <span className="text-center text-[0.45rem] font-bold uppercase leading-tight tracking-widest text-white sm:text-[0.5rem]">
             Tech
             <br />
             Stack
@@ -274,7 +274,7 @@ export default function Skills() {
       </motion.div>
 
           <motion.p
-            className="mt-5 text-center font-mono text-[0.6rem] uppercase tracking-[0.25em] text-gray-500 dark:text-gray-400"
+            className="mt-5 text-center font-mono text-[0.6rem] uppercase tracking-[0.25em] text-gray-500"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

@@ -33,7 +33,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section className="w-full max-w-2xl mx-auto p-6 bg-white" id="contact">
+    <section className="w-full max-w-2xl mx-auto p-6" id="contact">
       <ToastContainer position="top-right" hideProgressBar />
       
       <h2 className="text-3xl font-bold text-center text-gray-900 mb-3">

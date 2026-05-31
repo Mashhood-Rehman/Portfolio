@@ -55,7 +55,7 @@ export default function Project({
     <Link
       target="_blank"
       href={lnk}
-      className="group block border-b border-gray-900/10 dark:border-white/10 last:border-0"
+      className="group block border-b border-gray-900/10 last:border-0"
     >
       <motion.div
         ref={ref}
@@ -70,8 +70,8 @@ export default function Project({
       >
         <div className="flex flex-col md:flex-row md:items-baseline gap-4 md:gap-8">
           <h3 className={`text-2xl md:text-4xl font-bold tracking-tighter transition-all duration-500 ${isActive
-            ? "text-gray-900 dark:text-white"
-            : "text-gray-900/20 dark:text-white/20"
+            ? "text-gray-900"
+            : "text-gray-900/20"
             }`}>
             {title}
           </h3>
@@ -80,8 +80,8 @@ export default function Project({
               <span
                 key={index}
                 className={`text-xs md:text-sm font-medium border rounded-full px-3 py-1 transition-all duration-500 ${isActive
-                  ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900 border-transparent"
-                  : "border-gray-900/20 dark:border-white/20 text-gray-900/40 dark:text-white/40"
+                  ? "bg-gray-900 text-white border-transparent"
+                  : "border-gray-900/20 text-gray-900/40"
                   }`}
               >
                 {tag}
