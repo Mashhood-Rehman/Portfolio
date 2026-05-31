@@ -69,7 +69,7 @@ export default function Project({
         className="py-10 flex flex-col md:flex-row md:items-center justify-between transition-all duration-300 group-hover:px-4"
       >
         <div className="flex flex-col md:flex-row md:items-baseline gap-4 md:gap-8">
-          <h3 className={`text-4xl md:text-7xl font-bold tracking-tighter transition-all duration-500 ${isActive
+          <h3 className={`text-2xl md:text-4xl font-bold tracking-tighter transition-all duration-500 ${isActive
             ? "text-gray-900 dark:text-white"
             : "text-gray-900/20 dark:text-white/20"
             }`}>

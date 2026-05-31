@@ -36,21 +36,21 @@ export const experiencesData = [
     title: "Full-Stack Developer Intern",
     location: "Ideoversity , Lahore",
     description:
-      "I worked as a Full-Stack developer Intern for 4 months .",
+      "I worked as a Full Stack Developer Intern for 4 months.",
     icon: React.createElement(CgWorkAlt),
     date: "May, 2024 - Aug, 2024",
   },
 
   {
-    title: "Frontend Developer",
+    title: "Full Stack Developer",
     location: "Xsuite Digital , Lahore",
     description:
-      "I worked as a Frontend developer  for 8 months .",
+      "I worked as a Full Stack Developer  for 8 months.",
     icon: React.createElement(CgWorkAlt),
     date: "Aug, 2024 - April,2025",
   },
   {
-    title: "Full Stack Developer",
+    title: "Jr. Full Stack Developer",
     location: "Regent Business Strategies, Lahore",
     description:
       "I am currently working for Regent Business Strategies .",
@@ -71,12 +71,12 @@ export const projectsData = [
     lnk: "https://mtldispatch.com/",
   },
   {
-    title: "Trekso",
+    title: "Flexible Budget Removals",
     description:
       "A travel-focused website offering flight deals, trip planning, and destination-based booking services.",
-    tags: ["Next.js", "Typescript", "Tailwind CSS", "PostgreSQL"],
-    imageUrl: "/trekso.webp",
-    lnk: "https://trekso.fr/",
+    tags: ["MERN", "Javascript", "Tailwind CSS", "GOOGLE LOCATIONS API"],
+    imageUrl: "/FBR.png",
+    lnk: "https://dashboard.flexiblebudgetremovals.com/",
   },
   {
     title: "Life Alarm Services",
@@ -90,17 +90,50 @@ export const projectsData = [
 
 ] as const;
 
-export const skillsData = [
-  "JavaScript",
-  "Docker",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "HTML",
-  "CSS",
-  "Tailwind",
-  "MongoDB",
-  "Redux-Toolkit",
-  "Express",
+export const stackLayers = [
+  {
+    id: "foundation",
+    label: "Foundation",
+    tagline: "Languages & markup",
+    accent: "#f59e0b",
+    glow: "rgba(245, 158, 11, 0.35)",
+    skills: [
+      { name: "TypeScript", icon: "typescript", iconSrc: "/ts.png" },
+    ],
+  },
+  {
+    id: "interface",
+    label: "Interface",
+    tagline: "UI & client state",
+    accent: "#8b5cf6",
+    glow: "rgba(139, 92, 246, 0.35)",
+    skills: [
+      { name: "React", icon: "react", iconSrc: "/reactjs.png" },
+      { name: "Next.js", icon: "nextjs", iconSrc: "/nextjs.png" },
+      { name: "Tailwind", icon: "tailwind", iconSrc: "/tailwind.png" },
+    ],
+  },
+  {
+    id: "runtime",
+    label: "Runtime",
+    tagline: "APIs & data",
+    accent: "#06b6d4",
+    glow: "rgba(6, 182, 212, 0.35)",
+    skills: [
+      { name: "Node.js", icon: "nodejs", iconSrc: "/nodejs1.png" },
+      { name: "MongoDB", icon: "mongodb", iconSrc: "/mongodb.jpg" },
+    ],
+  },
+  {
+    id: "ship",
+    label: "Ship",
+    tagline: "Version control & delivery",
+    accent: "#10b981",
+    glow: "rgba(16, 185, 129, 0.35)",
+    skills: [
+      { name: "Git", icon: "git", iconSrc: "/git.png" },
+      { name: "Docker", icon: "docker", iconSrc: "/docker.png" },
+      { name: "CI/CD Pipelines", icon: "cicd", iconSrc: "/cicd.png" },
+    ],
+  },
 ] as const;

@@ -41,12 +41,11 @@ export function useActiveSectionContext() {
   const context = useContext(ActiveSectionContext);
 
   if (context === null) {
-    // Default value: Return an object with default values
     return {
       activeSection: "Home",
-      setActiveSection: () => {}, // Dummy function
+      setActiveSection: () => {},
       timeOfLastClick: 0,
-      setTimeOfLastClick: () => {}, // Dummy function
+      setTimeOfLastClick: () => {},
     };
   }
 
