@@ -57,7 +57,7 @@ export default function Projects() {
           y: "-50%",
           pointerEvents: "none",
         }}
-        className="fixed z-50 hidden md:block w-[450px] h-[280px] overflow-hidden rounded-2xl shadow-2xl pointer-events-none border border-white/20 backdrop-blur-sm"
+        className="fixed z-50 hidden md:block w-[450px] h-[250px] overflow-hidden rounded-2xl shadow-2xl pointer-events-none border border-white/20 backdrop-blur-sm"
         initial={{ scale: 0, opacity: 0, rotate: -5 }}
         animate={{
           scale: activeProject !== null ? 1 : 0,
@@ -78,7 +78,7 @@ export default function Projects() {
               src={project.imageUrl}
               alt={project.title}
               fill
-              className="object-cover scale-110"
+              className="object-contain scale-110"
               quality={95}
             />
           </motion.div>

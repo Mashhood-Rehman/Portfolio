@@ -19,10 +19,10 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        I am an undergraduate student at <span className="font-medium">Punjab University</span>, where I am pursuing a degree in
+        I have completed bachelor's from <span className="font-medium">Punjab University</span>, in
         <span className="font-medium"> Technology Education</span>. Alongside my studies, I learnt <span className="font-medium ">full-stack web development</span>.
         My core stack is
-        <span className="font-semibold"> React, Next.js, Node.js, and MongoDB</span>. I am also familiar with TypeScript.
+        <span className="font-semibold"> React, Next.js, Node.js, and MongoDB</span>.
       </p>
 
 

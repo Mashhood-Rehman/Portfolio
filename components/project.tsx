@@ -66,32 +66,35 @@ export default function Project({
           x: springY,
           y: springX,
         }}
-        className="py-10 flex flex-col md:flex-row md:items-center justify-between transition-all duration-300 group-hover:px-4"
+        className="py-10 grid grid-cols-1 md:grid-cols-[minmax(0,1.2fr)_minmax(0,2fr)_auto] md:items-center gap-4 md:gap-x-8 lg:gap-x-12 transition-all duration-300 group-hover:px-4"
       >
-        <div className="flex flex-col md:flex-row md:items-baseline gap-4 md:gap-8">
-          <h3 className={`text-2xl md:text-4xl font-bold tracking-tighter transition-all duration-500 ${isActive
+        <h3
+          className={`text-2xl md:text-4xl font-bold tracking-tighter transition-all duration-500 ${isActive
             ? "text-gray-900"
             : "text-gray-900/20"
-            }`}>
-            {title}
-          </h3>
-          <div className="flex flex-wrap gap-2">
-            {tags.map((tag, index) => (
-              <span
-                key={index}
-                className={`text-xs md:text-sm font-medium border rounded-full px-3 py-1 transition-all duration-500 ${isActive
-                  ? "bg-gray-900 text-white border-transparent"
-                  : "border-gray-900/20 text-gray-900/40"
-                  }`}
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
+            }`}
+        >
+          {title}
+        </h3>
+
+        <div className="flex flex-wrap items-center gap-2">
+          {tags.map((tag, index) => (
+            <span
+              key={index}
+              className={`text-xs md:text-sm font-medium border rounded-full px-3 py-1 transition-all duration-500 ${isActive
+                ? "bg-gray-900 text-white border-transparent"
+                : "border-gray-900/20 text-gray-900/40"
+                }`}
+            >
+              {tag}
+            </span>
+          ))}
         </div>
 
-        <div className={`hidden md:block text-sm font-bold tracking-widest uppercase transition-all duration-500 ${isActive ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-          }`}>
+        <div
+          className={`hidden md:flex items-center whitespace-nowrap text-sm font-bold tracking-widest uppercase transition-all duration-500 ${isActive ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+            }`}
+        >
           View Project &rarr;
         </div>
       </motion.div>
